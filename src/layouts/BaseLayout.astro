@@ -23,10 +23,10 @@ const navLinks = Astro.props.links || [
     <meta charset="utf-8" />
     <title>{title}</title>
     <!-- デフォルトのCSSとJSを読み込む -->
-    <link rel="stylesheet" href="css/main.css"/>
-    <link rel="stylesheet" href="css/layout.css"/>
-    {sidebar && <link rel="stylesheet" href="css/listview.css"/>}
-    <script type="module" src="js/main.js"></script>
+    <link rel="stylesheet" href="/src/components/css/main.css"/>
+    <link rel="stylesheet" href="/src/components/css/layout.css"/>
+    {sidebar && <link rel="stylesheet" href="/src/components/css/listview.css"/>}
+    <script type="module" src="/src/components/js/main.js"></script>
     <!-- 追加のCSSとJSを読み込む -->
     {css && (
       Array.isArray(css)

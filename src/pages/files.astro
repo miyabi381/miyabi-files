@@ -2,8 +2,12 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout title="ファイルたち">
+<BaseLayout
+  title="ファイルたち"
+  js="/src/components/js/loadfiles.js"
+>
   <h1>ファイルたち</h1>
   <p>ファイル表示</p>
   <ul id="file-list"></ul>
 </BaseLayout>
+

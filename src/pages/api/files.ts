@@ -4,7 +4,7 @@ import path from 'path';
 environment: "node";
 export async function GET() {
   // ルートの絶対パスを取得
-  const loadfilesDir = path.resolve(process.cwd(), 'src', 'loadfiles');
+  const loadfilesDir = path.resolve(process.cwd(), 'public', 'loadfiles');
   let files: string[];
   try {
     //　ディレクトリ内のファイル名を取得

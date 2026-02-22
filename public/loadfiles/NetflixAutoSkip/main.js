@@ -1,4 +1,4 @@
-﻿// cLog("NetflixAutoSkip : 読み込み完了");
+// cLog("NetflixAutoSkip : 読み込み完了");
 
 const browser = self.browser || self.chrome;
 

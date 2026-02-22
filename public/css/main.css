@@ -9,8 +9,8 @@ body {
     padding: 0;
     font-family: "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
     line-height: 1.6;
-    color: #333;
-    background: #f9f9f9;
+    color: #323232;
+    background: #eceff1;
 }
 
 /* ヘッダー・ナビ */
@@ -43,10 +43,36 @@ nav a:focus {
 main {
     max-width: 800px;
     margin: 2rem auto;
-    padding: 0 1rem;
+    padding: 1.5rem 1rem;
     background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+}
+
+/* ファイルリストと詳細表示 */
+#file-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#file-list li {
+    margin-bottom: 0.5rem;
+}
+#file-list a {
+    text-decoration: none;
+    color: #006bb3;
+}
+#file-list a:hover {
+    text-decoration: underline;
+}
+
+#file-detail pre {
+    background: #f4f4f4;
+    padding: 1rem;
     border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-break: break-word;
 }
 
 /* フッター */

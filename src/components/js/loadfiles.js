@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     const li = document.createElement('li');
                     const a = document.createElement('a');
                     a.textContent = f;
-                    a.href = `src/loadfiles/${f}`;
+                    a.href = `loadfiles/${f}`;
                     li.appendChild(a);
                     return li;
                 }));

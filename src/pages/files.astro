@@ -4,10 +4,18 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 <BaseLayout
   title="ファイルたち"
-  js="/src/components/js/loadfiles.js"
+  sidebar={true}
+  js={["/src/components/js/loadfiles.js","/src/components/js/viewfiles.js"]}
 >
-  <h1>ファイルたち</h1>
-  <p>ファイル表示</p>
-  <ul id="file-list"></ul>
+  <div slot="sidebar">
+    <h2>ファイルリスト</h2>
+    <ul id="file-list"></ul>
+  </div>
+
+  <div>
+    <h1>ファイルたち</h1>
+    <p>ファイル表示</p>
+    <!-- ここに詳細などを表示 -->
+  </div>
 </BaseLayout>
 

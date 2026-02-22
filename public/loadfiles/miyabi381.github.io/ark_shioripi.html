@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ja">
+<meta charset="UTF-8">
+
+<head>
+	<title id="title">
+		しおりぴのもりARK:設定
+	</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script type="text/javascript" src="js/main.js">	</script>
+</head>
+
+<body>
+	<div class="wide">
+		<div class="page-top up op">
+			<a href="#"><img src="image/top_page.png" alt="topPageLink"></a>
+		</div>
+		<header>
+			<h1 class="logo"><a href="index.html"><img src="image/logo.png" alt="miyabi free and easy"></a></h1>
+			<nav class="nav">
+				<ul>
+					<li><a href="index.html">ホーム</a></li>
+					<li><a href="about.html">自己紹介</a></li>
+					<li class="selectdiv">
+						<select onChange="location.href=value;">
+							<option selected> ARK:設定</option>
+							<option value="ark_cocacola.html">こかこーら！</option>
+							<option value="ark_shioripi.html">しおりぴのもり</option>
+						</select>
+					</li>
+
+					<li><a href="valheim.html">Vlaheim:Mod設定</a></li>
+					<li><a href="phasmophobia.html">Phasmophobia:証拠シミュレーション</a></li>
+					<li><a href="SSE-temp.html">SSE</a></li>
+					<li><a href="Scheduler-test.html">スケジューラ-テスト</a></li>
+				</ul>
+			</nav>
+		</header>
+		<h2>しおりぴのもりARKサーバー設定</h2>
+
+		<table frame="box" class="mokuji">
+			<tr>
+				<td style="width: 1em;"></td>
+				<td style="width: 1em;"></td>
+				<td style="width: 5em;"></td>
+				<td style="width: 5em;"></td>
+				<td style="width: 5em;"></td>
+				<td style="width: 5em;"></td>
+			</tr>
+			<tr high="20px">
+				<td colspan="3">
+					<h3 class="nospace">■目次</h3>
+				</td>
+			</tr>
+			<tr class="nospace">
+				<td></td>
+				<td colspan="2">
+					<strong>１,<a class="mokuji" href="#setting">基本設定</a></strong>
+				</td>
+			</tr>
+			<tr class="nospace">
+				<td></td>
+				<td colspan="2">
+					<strong>２,<a class="mokuji" href="#mgf">倍率設定</a></strong>
+				</td>
+			</tr>
+			<tr class="nospace">
+				<td></td>
+				<td colspan="4">
+					<strong>３,<b>MOD [<a id="hideText" class="mokuji" href="#none"
+								onclick="hidemodList('modTable','hideText')">表示</a>]</b></strong>
+				</td>
+			</tr>
+			<!-- <button onclick="test()">test</button>
+				<button onclick="hidemodList('modTable','hideText')()">table</button> -->
+			<tr class="nospace">
+				<td></td>
+				<td></td>
+				<td colspan="5">
+					<div id="modlist"></div>
+				</td>
+			</tr>
+			<tr class="nospace">
+				<td></td>
+				<td colspan="2">
+					<strong>４,<a class="mokuji" href="#history">変更履歴</a></strong>
+				</td>
+			</tr>
+		</table>
+		<h2> </h2>
+
+		<!-- -- 本文 -- -->
+		<main>
+			<h3 class="nospace mokuji" id="setting">■基本設定</h3>
+			<div class="main">
+				<p>
+					ゲームモード：PvPvE<br>
+					放置切断時間：1時間<br>
+					野生恐竜リセット時間：サーバー再起動後1日<br>
+					恐竜最大レベル：150<br>
+					テイム速度：3<br>
+					野生恐竜の気絶値：0.7<br>
+					飛行生物の移動速度レベルアップ：ON
+				</p>
+			</div>
+			<br>
+			<h3 class="nospace mokuji" id="mgf">■倍率設定</h3>
+			<div class="main">
+				<p>
+					経験値：5<br>
+					資源採取量：5<br>
+					資源復活速度：10<br>
+					資源耐久値：10<br>
+					プレイヤー被ダメージ：0.5<br>
+					プレイヤースタミナ消費速度：0.5<br>
+					死亡時の病気リセット：ON<br>
+					マインドワイプトニック再使用時間：無し<br>
+					刷り込みステータスバフ：1.5<br>
+					恐竜スタミナ消費速度：0.5<br>
+					恐竜体力回復速度：5<br>
+					生物の出現数：0.8<br>
+					ダメージによる資源採取量：3<br>
+					アイテム消滅時間：10<br>
+					アイテム腐敗時間：10<br>
+					作物成長速度：10<br>
+					作物腐敗：無し<br>
+					夜の長さ：0.5<br>
+					建造物修理時間間隔：無し<br>
+					接続されていないパイプ破壊:2日<br>
+					接地後の建築物改修時間：無し<br>
+					発電機等燃料消費間隔：4<br>
+					プレイヤー状態異常回復速度：2<br>
+					酸素量による水泳速度：2<br>
+					プレイヤーと資源間の復活可能距離：0.5<br>
+					髭の成長速度：10<br>
+					交配間隔：0.01<br>
+					孵化速度：30<br>
+					赤ちゃんの成長速度：50<br>
+					世話間隔：0.25<br>
+					赤ちゃんの餌消費間隔：0.5<br>
+					刷り込み値：2<br>
+					恐竜の資源に対するダメージ：3<br>
+					産卵間隔：0.5<br>
+					レイド恐竜への餌やり：ON<br>
+					レイド恐竜餌消費速度：0.5<br>
+					全生物のC4爆弾接着：ON<br>
+				</p>
+			</div>
+			<br>
+			<h3 class="nospace mokuji" id="mod">■MOD</h3>
+			<div class="main">
+				<h4 style="margin-top: 0px;" id="Death Recovery Mod (v1.12.1)">●<a
+						style="font-size: large;">D</a>eathRecovery Mod (v1.12.1)</h4>
+				<div class="main">
+					<p>・死亡時・ファストトラベル時等に生成される自分のアイテム袋を回収してくれる墓石を追加</p>
+				</div>
+				<div class="linkcard">
+					<a class="linkhead" href="https://steamcommunity.com/sharedfiles/filedetails/?id=751991809">
+						SteamWorkshop::Death Recovery Mod (v1.12.1)
+					</a>
+					<p>詳細はこちら</p>
+					<a class="linkimg" href="https://steamcommunity.com/sharedfiles/filedetails/?id=751991809">
+						<img
+							src="https://steamuserimages-a.akamaihd.net/ugc/937214408383390195/C2F07006F631B25942617AA9AD11F85057BD945E/?imw=268&imh=268&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true">
+					</a>
+				</div>
+				<br>
+				<h4 id="Extra Large Storage Box">●<a style="font-size: large;">E</a>xtra Large Storage Box</h4>
+				<div class="main">
+					<p>・通常の収納ボックス(大)より大容量の収納ボックスや肥料箱を追加</p>
+				</div>
+				<div class="linkcard">
+					<a class="linkhead"
+						href="https://steamcommunity.com/sharedfiles/filedetails/?l=japanese&id=743217220">
+						SteamWorkshop::Extra Large Storage Box
+					</a>
+					<p>詳細はこちら</p>
+					<a class="linkimg"
+						href="https://steamcommunity.com/sharedfiles/filedetails/?l=japanese&id=743217220">
+						<img
+							src="https://steamuserimages-a.akamaihd.net/ugc/263844677742802620/4C75133CDF3E082E0F913FDC4E9335C02FEC6DCB/?imw=268&imh=268&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true">
+					</a>
+				</div>
+				<br>
+				<h4 id="Upgrade Station v1.8i">●<a style="font-size: large;">U</a>pgrade Station v1.8i</h4>
+				<div class="main">
+					<p>・アイテムを設計図に変換したり品質やステータスを上げられる作業台を追加</p>
+				</div>
+				<div class="linkcard">
+					<a class="linkhead" href="https://steamcommunity.com/sharedfiles/filedetails/?id=821530042">
+						SteamWorkshop::Upgrade Station v1.8i
+					</a>
+					<p>詳細はこちら</p>
+					<a class="linkimg" href="https://steamcommunity.com/sharedfiles/filedetails/?id=821530042">
+						<img
+							src="https://steamuserimages-a.akamaihd.net/ugc/179413592578538664/1EA91BF1DD8A3780B21B0867BDD88E3180E75C52/?imw=268&imh=268&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true">
+					</a>
+				</div>
+				<br>
+				<h4 id="Swim Clear Scuba Mask">●<a style="font-size: large;">S</a>wim Clear Scuba Mask</h4>
+				<div class="main">
+					<p>・通常のスキューバマスクよりクリアな視界のスキューバマスクを追加</p>
+				</div>
+				<div class="linkcard">
+					<a class="linkhead" href="https://steamcommunity.com/sharedfiles/filedetails/?id=1102050924">
+						SteamWorkshop::Swim Clear Scuba Mask
+					</a>
+					<p>詳細はこちら</p>
+					<a class="linkimg" href="https://steamcommunity.com/sharedfiles/filedetails/?id=1102050924">
+						<img
+							src="https://steamuserimages-a.akamaihd.net/ugc/849345253396573541/2FECE561F1E20E5235C561E2E3DDF341ACBA51DB/?imw=268&imh=268&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true">
+					</a>
+				</div>
+				<br>
+				<h4 id="Super Spyglass (Open Source)">●<a style="font-size: large;">S</a>uper Spyglass (Open Source)
+				</h4>
+				<div class="main">
+					<p>・生物のステータスを表示できる望遠鏡を追加</p>
+				</div>
+				<div class="linkcard">
+					<a class="linkhead" href="https://steamcommunity.com/sharedfiles/filedetails/?id=793605978">
+						SteamWorkshop::Super Spyglass (Open Source)
+					</a>
+					<p>詳細はこちら</p>
+					<a class="linkimg" href="https://steamcommunity.com/sharedfiles/filedetails/?id=793605978">
+						<img
+							src="https://steamuserimages-a.akamaihd.net/ugc/781784924155141819/84003AA030C8EC1F8E347FBAF626E869389A39EF/?imw=268&imh=268&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true">
+					</a>
+				</div>
+				<br>
+				<h4 id="Egg N Poop Collector / Incubator">●<a style="font-size: large;">E</a>gg N Poop Collector /
+					Incubator</h4>
+				<div class="main">
+					<p>・受精卵のみを自動で回収したり、エアコンの代わりになる孵化装置を追加したりする</p>
+				</div>
+				<div class="linkcard">
+					<a class="linkhead"
+						href="https://steamcommunity.com/sharedfiles/filedetails/?l=japanese&id=554678442">
+						SteamWorkshop::Egg N Poop Collector / Incubator
+					</a>
+					<p>詳細はこちら</p>
+					<a class="linkimg"
+						href="https://steamcommunity.com/sharedfiles/filedetails/?l=japanese&id=554678442">
+						<img
+							src="https://steamuserimages-a.akamaihd.net/ugc/270588452686865670/84B4DE20E0CC240F352D85FB05674FD58227F2EF/?imw=268&imh=268&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true">
+					</a>
+				</div>
+				<br>
+				<h4 id="Breedable Creatures Bundle">●<a style="font-size: large;">B</a>reedable Creatures Bundle</h4>
+				<div class="main">
+					<p>・通常では交配できない生物を交配できるようにする</p>
+				</div>
+				<div class="linkcard">
+					<a class="linkhead" href="https://steamcommunity.com/sharedfiles/filedetails/?id=1149487646">
+						SteamWorkshop::Breedable Creatures Bundle
+					</a>
+					<p>詳細はこちら</p>
+					<a class="linkimg" href="https://steamcommunity.com/sharedfiles/filedetails/?id=1149487646">
+						<img
+							src="https://steamuserimages-a.akamaihd.net/ugc/1290794169997767324/C2176E149B235A4D6B2217FE082B464F65C52946/?imw=268&imh=268&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true">
+					</a>
+				</div>
+				<br>
+				<h4 id="Auto Run - Func+">●<a style="font-size: large;">A</a>uto Run - Func+</h4>
+				<div class="main">
+					<p>・オートランの追加</p>
+				</div>
+				<div class="linkcard">
+					<a class="linkhead" href="https://steamcommunity.com/sharedfiles/filedetails/?id=801082391">
+						SteamWorkshop::Auto Run - Func+
+					</a>
+					<p>詳細はこちら</p>
+					<a class="linkimg" href="https://steamcommunity.com/sharedfiles/filedetails/?id=801082391">
+						<img
+							src="https://steamuserimages-a.akamaihd.net/ugc/264979370753702041/8E397D4E49DAE093FDB41C71692B5CD955243DF2/?imw=268&imh=268&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true">
+					</a>
+				</div>
+				<br>
+				<h4 id="Dino Aid">●<a style="font-size: large;">D</a>ino Aid</h4>
+				<div class="main">
+					<p>・生物の体力を即時全回復するアイテムの追加</p>
+				</div>
+				<div class="linkcard">
+					<a class="linkhead"
+						href="https://steamcommunity.com/sharedfiles/filedetails/?l=japanese&id=750483861">
+						SteamWorkshop::Dino Aid
+					</a>
+					<p>詳細はこちら</p>
+					<a class="linkimg"
+						href="https://steamcommunity.com/sharedfiles/filedetails/?l=japanese&id=750483861">
+						<img
+							src="https://steamuserimages-a.akamaihd.net/ugc/259341780491154049/404AD647E0EE31428D375FEF0B81B5E98FA414F1/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true">
+					</a>
+				</div>
+				<br>
+				<h4 id="Meat Spoiler">●<a style="font-size: large;">M</a>eat Spoiler</h4>
+				<div class="main">
+					<p>・生肉を強制的に腐らせる装置を追加</p>
+				</div>
+				<div class="linkcard">
+					<a class="linkhead"
+						href="https://steamcommunity.com/sharedfiles/filedetails/?l=japanese&id=569786012">
+						SteamWorkshop::Meat Spoiler
+					</a>
+					<p>詳細はこちら</p>
+					<a class="linkimg"
+						href="https://steamcommunity.com/sharedfiles/filedetails/?l=japanese&id=569786012">
+						<img
+							src="https://steamuserimages-a.akamaihd.net/ugc/305486229879116806/53B94E3893CD91F474F8C805663B92A37D8DB435/?imw=268&imh=268&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true">
+					</a>
+				</div>
+				<br>
+				<h4 id="HG Stacking Mod 10000-90 V315">●<a style="font-size: large;">H</a>G Stacking Mod 10000-90 V315
+				</h4>
+				<div class="main">
+					<p>・資源の最大スタック数を増加し重量を軽減する</p>
+				</div>
+				<div class="linkcard">
+					<a class="linkhead" href="https://steamcommunity.com/sharedfiles/filedetails/?id=928102085">
+						SteamWorkshop::HG Stacking Mod 10000-90 V315
+					</a>
+					<p>詳細はこちら</p>
+					<a class="linkimg" href="https://steamcommunity.com/sharedfiles/filedetails/?id=928102085">
+						<img
+							src="https://steamuserimages-a.akamaihd.net/ugc/950722412905508262/4998E0852239EC6F92384C3342AC4B9AE59CC122/?imw=268&imh=268&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true">
+					</a>
+				</div>
+				<br>
+				<h4 id="Creature Finder Deluxe">●<a style="font-size: large;">C</a>reature Finder Deluxe</h4>
+				<div class="main">
+					<p>・MAP上の生物の場所、レベル等を検索し表示させる機能の追加</p>
+				</div>
+				<div class="linkcard">
+					<a class="linkhead" href="https://steamcommunity.com/sharedfiles/filedetails/?id=1591643730">
+						SteamWorkshop::Creature Finder Deluxe
+					</a>
+					<p>詳細はこちら</p>
+					<a class="linkimg" href="https://steamcommunity.com/sharedfiles/filedetails/?id=1591643730">
+						<img
+							src="https://steamuserimages-a.akamaihd.net/ugc/949599793485784363/F6FEC56D090E9E3DEF6CE8CD7151FE929A6D55D2/?imw=268&imh=268&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true">
+					</a>
+				</div>
+				<br>
+				<h4 id="EZTame">●<a style="font-size: large;">E</a>ZTame</h4>
+				<div class="main">
+					<p>・気絶させた生物に食べさせるとその生物の食料値が減少し、気絶値が上昇するアイテムの追加</p>
+				</div>
+				<div class="linkcard">
+					<a class="linkhead"
+						href="https://steamcommunity.com/sharedfiles/filedetails/?l=japanese&id=898255865">
+						SteamWorkshop::EZTame
+					</a>
+					<p>詳細はこちら</p>
+					<a class="linkimg"
+						href="https://steamcommunity.com/sharedfiles/filedetails/?l=japanese&id=898255865">
+						<img
+							src="https://steamuserimages-a.akamaihd.net/ugc/170416213796139825/BD6C246B1950B3FA538C23A90C295963D049ADA1/?imw=268&imh=268&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true">
+					</a>
+				</div>
+				<br>
+				<h4 id="All Dinos Allow Guns">●<a style="font-size: large;">A</a>ll Dinos Allow Guns</h4>
+				<div class="main">
+					<p>・騎乗できる全ての生物で道具や銃を使用できるようにする</p>
+				</div>
+				<div class="linkcard">
+					<a class="linkhead"
+						href="https://steamcommunity.com/sharedfiles/filedetails/?l=japanese&id=1440414363">
+						SteamWorkshop::All Dinos Allow Guns
+					</a>
+					<p>詳細はこちら</p>
+					<a class="linkimg"
+						href="https://steamcommunity.com/sharedfiles/filedetails/?l=japanese&id=1440414363">
+						<img
+							src="https://steamuserimages-a.akamaihd.net/ugc/959714396787500239/8C334FFBC6269D96D756264DBDDD37913163D4B7/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true">
+					</a>
+				</div>
+				<br>
+
+			</div>
+			<br>
+
+			<h3 class="nospace mokuji" id="history">■変更履歴</h3>
+			<div class="main">
+				<h4 style="margin: 0;">・2021/10/22</h4>
+				<div class="main">
+					まだこれからよ<br>
+					使い方とかはこれから順次書いてく予定
+				</div>
+			</div>
+
+
+		</main>
+
+		<script async
+			src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7300765525840565"
+			crossorigin="anonymous"></script>
+		<!-- ディスプレイ -->
+		<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7300765525840565"
+			data-ad-slot="6226247405" data-ad-format="auto" data-full-width-responsive="true"></ins>
+		<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+
+		<footer class="footer">
+			<p>&copy;Miyabi. All rights reserved.</p>
+		</footer>
+	</div>
+</body>
+
+</html>

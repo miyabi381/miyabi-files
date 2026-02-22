@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<title>
+		テスト用Scheduler-test
+	</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/ntt-style.css">
+	<!-- <script type="text/javascript" src="js/main.js"></script> -->
+	<script type="text/javascript" src="js/Scheduler-test.js" defer></script>
+</head>
+
+<body>
+	<div class="wide">
+		<div class="page-top up op">
+			<a href="#"><img src="image/top_page.png" alt="topPageLink"></a>
+		</div>
+		<header>
+			<h1 class="logo"><a href="index.html"><img src="image/logo.png" alt="miyabi free and easy"></a></h1>
+			<nav class="nav">
+				<ul>
+					<li><a href="index.html">ホーム</a></li>
+					<li><a href="about.html">自己紹介</a></li>
+					<li class="selectdiv">
+						<select onChange="location.href=value;">
+							<option selected>ARK:設定</option>
+							<option value="ark_cocacola.html">こかこーら！</option>
+							<option value="ark_shioripi.html">しおりぴのもり</option>
+						</select>
+					</li>
+
+					<li><a href="valheim.html">Vlaheim:Mod設定</a></li>
+					<li><a href="phasmophobia.html">Phasmophobia:証拠シミュレーション</a></li>
+					<li><a href="SSE-temp.html">SSE</a></li>
+					<li><a href="Scheduler-test.html">スケジューラ-テスト</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<h2>テスト用　スケジューラ</h2>
+		<div>
+			<button type="button" class="itiran-btn">一覧表示</button>
+		</div>
+
+		<div id="ここにグループ一覧">
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+
+		<!-- スケジュール挿入用テーブル -->
+		<table class="Scheduler" id="kari-Scheduler">
+			<tr style="background-color: #95e3f238;">
+				<th style="background-color: #00000000;"></th>
+				<td>6</td>
+				<td>7</td>
+				<td>8</td>
+				<td>9</td>
+				<td>10</td>
+				<td>11</td>
+			</tr>
+			<tr>
+				<th>とまと</th>
+				<td></td>
+				<td></td>
+				<td class="cell-padding">
+					<ber class="cell-item">ペースト</ber>
+				</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+
+		<h2>テスト用　お問い合わせホーム</h2>
+		<form id="test-form" class="form-wrapper" action="https://formspree.io/f/mqedbwqn" method="POST">
+
+			<label for="name">お名前</label>
+			<input type="text" id="name" name="name" required>
+
+			<label for="email">メールアドレス</label>
+			<input type="email" id="email" name="email" required>
+
+			<label for="select">商品選択</label>
+			<select id="select" name="select">
+				<option>トマト</option>
+				<option>きゅうり</option>
+				<option>なすび</option>
+				<option>にんじん</option>
+			</select>
+
+			<label for="message">お問い合わせ内容</label>
+			<textarea id="message" name="message" required></textarea>
+
+			<button type="submit">送信</button>
+
+		</form>
+
+		<footer class="footer">
+			<p>&copy;Miyabi. All rights reserved.</p>
+		</footer>
+	</div>
+</body>
+
+</html>

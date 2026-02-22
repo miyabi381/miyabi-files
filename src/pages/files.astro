@@ -25,7 +25,7 @@ const files = getAllFiles(loadfilesDir);
 <BaseLayout title="ファイルたち" sidebar={true} js={["/js/viewfiles.js"]}>
   <div slot="sidebar">
     <h2>ファイルリスト</h2>
-    <ul>
+    <ul id="file-list">
       {
         files.map((f) => (
           <li>
@@ -36,7 +36,7 @@ const files = getAllFiles(loadfilesDir);
     </ul>
   </div>
 
-  <div>
+  <div id="file-detail">
     <h1>ファイルたち</h1>
     <p>ファイル表示</p>
     <!-- ここに詳細などを表示 -->

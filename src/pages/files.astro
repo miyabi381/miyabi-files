@@ -1,15 +1,39 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import fs from "fs";
+import path from "path";
+
+const loadfilesDir = path.resolve(
+  Astro.site?.pathname || ".",
+  "public",
+  "loadfiles",
+);
+// ビルド時にディレクトリを走査
+function getAllFiles(dir: string, base = ""): string[] {
+  const entries = fs.readdirSync(dir, { withFileTypes: true });
+  return entries.flatMap((entry) => {
+    const rel = path.join(base, entry.name);
+    if (entry.isDirectory())
+      return getAllFiles(path.join(dir, entry.name), rel);
+    return rel;
+  });
+}
+
+const files = getAllFiles(loadfilesDir);
 ---
 
-<BaseLayout
-  title="ファイルたち"
-  sidebar={true}
-  js={["src/components/js/loadfiles.js","src/components/js/viewfiles.js"]}
->
+<BaseLayout title="ファイルたち" sidebar={true} js={["/js/viewfiles.js"]}>
   <div slot="sidebar">
     <h2>ファイルリスト</h2>
-    <ul id="file-list"></ul>
+    <ul>
+      {
+        files.map((f) => (
+          <li>
+            <a href={`/loadfiles/${f}`}>{f}</a>
+          </li>
+        ))
+      }
+    </ul>
   </div>
 
   <div>
@@ -18,4 +42,3 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <!-- ここに詳細などを表示 -->
   </div>
 </BaseLayout>
-

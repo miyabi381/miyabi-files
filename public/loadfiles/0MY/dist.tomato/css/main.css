@@ -1,0 +1,94 @@
+/* ベーシックリセット */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+    line-height: 1.6;
+    color: #323232;
+    background: #eceff1;
+}
+
+/* ヘッダー・ナビ */
+header {
+    background: #ffffff;
+    border-bottom: 1px solid #ddd;
+    padding: 0.5rem 1rem;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+}
+nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 0.25rem 0.5rem;
+    transition: background 0.2s, color 0.2s;
+}
+nav a:hover,
+nav a:focus {
+    background: #007acc;
+    color: #fff;
+    border-radius: 4px;
+}
+
+/* メインコンテンツ */
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1.5rem 1rem;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+}
+
+/* ファイルリストと詳細表示 */
+#file-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#file-list li {
+    margin-bottom: 0.5rem;
+}
+#file-list a {
+    text-decoration: none;
+    color: #006bb3;
+}
+#file-list a:hover {
+    text-decoration: underline;
+}
+
+#file-detail pre {
+    background: #f4f4f4;
+    padding: 1rem;
+    border-radius: 4px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+/* フッター */
+footer {
+    text-align: center;
+    font-size: 0.875rem;
+    color: #666;
+    padding: 1rem 0;
+    border-top: 1px solid #ddd;
+    background: #fff;
+}
+
+/* モバイル対応 */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}

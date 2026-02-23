@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "[TEST]スケジューラを簡単に操作したい！",
+  "version": "2026.02.12",
+  "description": "アイコン追加",
+  "permissions": [
+    "scripting",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://miyabi381.github.io/*",
+    "https://web.drm.ddreams.jp/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {}
+}

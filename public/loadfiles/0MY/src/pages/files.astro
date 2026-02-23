@@ -1,0 +1,95 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import fs from "fs";
+import path from "path";
+
+const loadfilesDir = path.resolve(
+  Astro.site?.pathname || ".",
+  "public",
+  "loadfiles",
+);
+// ビルド時にディレクトリを走査
+function getAllFiles(dir: string, base = ""): string[] {
+  const entries = fs.readdirSync(dir, { withFileTypes: true });
+  return entries.flatMap((entry) => {
+    const rel = path.join(base, entry.name);
+    if (entry.isDirectory())
+      return getAllFiles(path.join(dir, entry.name), rel);
+    return rel;
+  });
+}
+
+const files = getAllFiles(loadfilesDir);
+
+// パス配列をツリー構造に変換（ディレクトリはオブジェクト、ファイルはnull）
+function buildTree(paths: string[]) {
+  const root: Record<string, any> = {};
+  paths.forEach((p) => {
+    // Windows のバックスラッシュをスラッシュに統一
+    const parts = p.replace(/\\/g, "/").split("/");
+    let node = root;
+    parts.forEach((part, idx) => {
+      if (!node[part]) {
+        node[part] = { __children: {} };
+      }
+      if (idx === parts.length - 1) {
+        // ファイルのフラグ
+        node[part].__isFile = true;
+      }
+      node = node[part].__children;
+    });
+  });
+  return root;
+}
+
+const fileTree = buildTree(files);
+
+// frontmatterではJSXを直接生成できないため、リストのHTMLは
+// マークアップセクション側に持ち越して再帰的に構築する。
+---
+
+<BaseLayout title="ファイルたち" sidebar={true} js={["/js/viewfiles.js"]}>
+  <div slot="sidebar">
+    <h2>ファイルリスト</h2>
+    <ul id="file-list">
+      {(() => {
+        function renderTree(tree: any, prefix = "") {
+          // 名前でソート: まずディレクトリ、次にファイル。いずれもアルファベット順。
+          const entries = Object.entries(tree).sort(([aName, aInfo]: [string, any], [bName, bInfo]: [string, any]) => {
+            // ディレクトリかどうか
+            const aDir = !aInfo.__isFile;
+            const bDir = !bInfo.__isFile;
+            if (aDir !== bDir) return aDir ? -1 : 1;
+            return aName.localeCompare(bName, undefined, {numeric: true, sensitivity: 'base'});
+          });
+          return entries.map(([name, info]: [string, any]) => {
+            const pathSeg = prefix ? `${prefix}/${name}` : name;
+            if (info.__isFile) {
+              return (
+                <li>
+                  <a href={`/loadfiles/${pathSeg}`}>{name}</a>
+                </li>
+              );
+            } else {
+              return (
+                <li>
+                  <details>
+                    <summary>{name}</summary>
+                    <ul>{renderTree(info.__children, pathSeg)}</ul>
+                  </details>
+                </li>
+              );
+            }
+          });
+        }
+        return renderTree(fileTree);
+      })()}
+    </ul>
+  </div>
+
+  <div id="file-detail">
+    <h1>ファイルたち</h1>
+    <p>ファイル表示</p>
+    <!-- ここに詳細などを表示 -->
+  </div>
+</BaseLayout>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<title>
+		Phasumophobia:証拠シミュレーション
+	</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script type="text/javascript" src="js/main.js"></script>
+
+	<meta name="google-site-verification" content="nTKgiE1pLX6vlt7dHTmmTHhWVTMxIII8uKQ_ZNWoMCw" />
+</head>
+
+<body class="noselect">
+	<div class="wide">
+		<div class="page-top up op">
+			<a href="#"><img src="image/top_page.png" alt="topPageLink"></a>
+		</div>
+		<header>
+			<h1 class="logo"><a href="index.html"><img src="image/logo.png" alt="miyabi free and easy"></a></h1>
+			<nav class="nav">
+				<ul>
+					<li><a href="index.html">ホーム</a></li>
+					<li><a href="about.html">自己紹介</a></li>
+					<li class="selectdiv">
+						<select onChange="location.href=value;">
+							<option selected>ARK:設定</option>
+							<option value="ark_cocacola.html">こかこーら！</option>
+							<option value="ark_shioripi.html">しおりぴのもり</option>
+						</select>
+					</li>
+
+					<li><a href="valheim.html">Vlaheim:Mod設定</a></li>
+					<li><a href="phasmophobia.html">Phasmophobia:証拠シミュレーション</a></li>
+					<li><a href="SSE-temp.html">SSE</a></li>
+					<li><a href="Scheduler-test.html">スケジューラ-テスト</a></li>
+				</ul>
+			</nav>
+		</header>
+		<p class="main">まだまだ未完成です。。。</p>
+		<span style="margin-left: 40px; margin-top:20px; font-size: 40px; display:inline-block; ">証拠</span>
+
+		<div class="border-Line"></div>
+
+		<table class="PPevidence">
+			<tr>
+				<td>
+					<a id="emf" href="#a" onclick="PPEvidencText('emf','emfCheck'),PPtestGhost('emf')"
+						class="none-underline">
+						<span id="emfCheck" class="square"></span> EMFレベル5
+					</a>
+				</td>
+				<td>
+					<a id="dots" href="#a" onclick="PPEvidencText('dots','dotsCheck'),PPGhostJudge('dots')"
+						class="none-underline">
+						<span id="dotsCheck" class="square"></span> D.O.T.S.プロジェクター
+					</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a id="shimon" href="#a" onclick="PPEvidencText('shimon','shimonCheck')" class="none-underline">
+						<span id="shimonCheck" class="square"></span> 指紋 　　　
+					</a>
+				</td>
+				<td>
+					<a id="orb" href="#a" onclick="PPEvidencText('orb','orbCheck')" class="none-underline">
+						<span id="orbCheck" class="square"></span> ゴーストオーブ
+					</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a id="book" href="#a" onclick="PPEvidencText('book','bookCheck'),PPtestGhost('book')"
+						class="none-underline">
+						<span id="bookCheck" class="square"></span> ゴーストライティング
+					</a>
+				</td>
+				<td>
+					<a id="box" href="#a" onclick="PPEvidencText('box','boxCheck'),PPtestGhost('box')"
+						class="none-underline">
+						<span id="boxCheck" class="square"></span> スピリットボックス
+					</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a id="ice" href="#a" onclick="PPEvidencText('ice','iceCheck')" class="none-underline">
+						<span id="iceCheck" class="square"></span> 氷点下の温度
+					</a>
+				</td>
+				<td>
+				</td>
+			</tr>
+		</table>
+		<br>
+		<div class="border-Line"></div>
+		<span
+			style="margin-left: 200px; margin-top:10px; margin-bottom:10px; font-size: 20px; display:inline-block; ">ゴーストの正体：</span>
+		<table class="PPghost">
+			<tr>
+				<td>
+					<a id="spirit" href="#a" onclick="PPGhostName('spirit')" class="none-underline">スピリット</a>
+				</td>
+				<td>
+					<a id="wraith" href="#a" onclick="PPGhostName('wraith')" class="none-underline">　レイス　</a>
+				</td>
+				<td>
+					<a id="phantom" href="#a" onclick="PPGhostName('phantom')" class="none-underline">ファントム</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a id="polter" href="#a" onclick="PPGhostName('polter')" class="none-underline">ポルターガイスト</a>
+				</td>
+				<td>
+					<a id="banshee" href="#a" onclick="PPGhostName('banshee')" class="none-underline"> バンシー </a>
+				</td>
+				<td>
+					<a id="jinn" href="#a" onclick="PPGhostName('jinn')" class="none-underline"> 　ジン　 </a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a id="mare" href="#a" onclick="PPGhostName('mare')" class="none-underline"> メアー </a>
+				</td>
+				<td>
+					<a id="revenant" href="#a" onclick="PPGhostName('revenant')" class="none-underline">レヴナント</a>
+				</td>
+				<td><a id="shade" href="#a" onclick="PPGhostName('shade')" class="none-underline"> シェード </a>
+				</td>
+			</tr>
+			<tr>
+				<td><a id="demon" href="#a" onclick="PPGhostName('demon')" class="none-underline"> デーモン </a>
+				</td>
+				<td><a id="yurei" href="#a" onclick="PPGhostName('yurei')" class="none-underline"> 　幽霊　 </a>
+				</td>
+				<td><a id="oni" href="#a" onclick="PPGhostName('oni')" class="none-underline">　　鬼　　</a>
+				</td>
+			</tr>
+			<tr>
+				<td><a id="yokai" href="#a" onclick="PPGhostName('yokai')" class="none-underline"> 　妖怪　 </a>
+				</td>
+				<td><a id="hantu" href="#a" onclick="PPGhostName('hantu')" class="none-underline"> ハントゥ </a>
+				</td>
+				<td><a id="goryo" href="#a" onclick="PPGhostName('goryo')" class="none-underline"> 　御霊　 </a>
+				</td>
+			</tr>
+			<tr>
+				<td><a id="myling" href="#a" onclick="PPGhostName('myling')" class="none-underline">マイリング</a>
+				</td>
+				<td><a id="onryo" href="#a" onclick="PPGhostName('onryo')" class="none-underline"> 　怨霊　 </a>
+				</td>
+				<td><a id="twins" href="#a" onclick="PPGhostName('twins')" class="none-underline"> ツインズ </a>
+				</td>
+			</tr>
+			<tr>
+				<td><a id="raiju" href="#a" onclick="PPGhostName('raiju')" class="none-underline"> 　雷獣　 </a>
+				</td>
+				<td><a id="obake" href="#a" onclick="PPGhostName('obake')" class="none-underline">　化け狐　</a>
+				</td>
+				<td><a id="mimic" href="#a" onclick="PPGhostName('mimic')" class="none-underline"> ミミック </a>
+				</td>
+			</tr>
+			<tr>
+				<td><a id="moroi" href="#a" onclick="PPGhostName('moroi')" class="none-underline"> モーロイ </a>
+				</td>
+				<td><a id="deogen" href="#a" onclick="PPGhostName('deogen')" class="none-underline"> デオヘン </a>
+				</td>
+				<td><a id="thaye" href="#a" onclick="PPGhostName('thaye')" class="none-underline">　セーイ　</a>
+				</td>
+			</tr>
+		</table>
+
+
+
+		<footer class="footer">
+			<p>&copy;Miyabi. All rights reserved.</p>
+		</footer>
+	</div>
+</body>
+
+</html>

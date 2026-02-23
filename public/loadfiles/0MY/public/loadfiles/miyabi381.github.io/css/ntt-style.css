@@ -1,0 +1,110 @@
+.solid-box {
+	border: 1px solid #bec2c7;
+	width: 300px;
+	margin-top: 0px;
+	margin-bottom: 3px;
+	font-size: larger;
+	font-weight: bold;
+	color: #5c6570;
+	background-color: #fffcf5;
+}
+.solid-box.isActive{
+	background-color: #f0ede5;
+}
+
+.itiran-btn {
+	background: #89b2e5;
+	color: white;
+	border: none;
+	padding: 10px 12px;
+	font-size: large;
+	font-weight: bold;
+	border-radius: 6px;
+	cursor: pointer;
+	margin-bottom: 10px;
+}
+.itiran-btn:hover{
+	background-color: #7da0ca;
+}
+
+.overlay {
+	position: absolute;
+	padding: 5px;
+	background-color: #fffcf5cb;
+	border: 1px solid #bec2c7;
+	border-radius: 6px;
+}
+
+
+
+/* てーぶる */
+.Scheduler {
+	margin-top: 2em;
+	border-collapse: collapse;
+}
+
+.Scheduler th,
+.Scheduler td {
+	padding: 8px;
+	border: 1px solid #bec2c7;
+	text-align: center;
+	width: 150px;
+	font-weight: bold;
+	color: #5c6570;
+}
+
+.Scheduler th {
+	background-color: #95e3f238;
+	color: #1c2a44;
+	vertical-align: top;
+}
+
+.cell-item {
+	background: #cfe0ff;
+	border: 1px solid #6387b2;
+	border-radius: 8px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.cell-padding {
+	padding: 0px 2px;
+}
+
+
+/* ふぉーむ */
+.form-wrapper {
+  max-width: 500px;
+  padding: 30px;
+  border-radius: 12px;
+  border: #bec2c7 solid 2px;
+}
+
+.form-wrapper input,
+.form-wrapper select,
+.form-wrapper textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 18px;
+  border: 1px solid #dcdfe6;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: 0.2s ease;
+  box-sizing: border-box;
+}
+
+.form-wrapper input:focus,
+.form-wrapper select:focus,
+.form-wrapper textarea:focus {
+  outline: none;
+  border-color: #4f8cff;
+  box-shadow: 0 0 0 3px rgba(79,140,255,0.15);
+}
+
+.form-wrapper textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+

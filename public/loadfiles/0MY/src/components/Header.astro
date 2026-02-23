@@ -1,0 +1,18 @@
+---
+interface Link {
+  href: string;
+  label: string;
+}
+
+const { links = [] } = Astro.props as { links?: Link[] };
+---
+
+<header>
+  <nav>
+    <ul>
+      {links.map((link: Link) => (
+        <li><a href={link.href}>{link.label}</a></li>
+      ))}
+    </ul>
+  </nav>
+</header>

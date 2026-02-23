@@ -1,0 +1,62 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Sidebar from "../components/Sidebar.astro";
+
+const { title } = Astro.props;
+const { css } = Astro.props;
+const { js } = Astro.props;
+// サイドバー付きレイアウトを欲しいときは true を渡す
+const { sidebar } = Astro.props;
+// ナビリンクはページが増えたらここで中央管理
+const navLinks = Astro.props.links || [
+  { href: "/", label: "HOME" },
+  { href: "/files", label: "ファイルたち" },
+  { href: "/test", label: "テストページ" },
+];
+
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>{title}</title>
+    <!-- デフォルトのCSSとJSを読み込む -->
+    <link rel="stylesheet" href="/css/main.css"/>
+    <link rel="stylesheet" href="/css/layout.css"/>
+    {sidebar && <link rel="stylesheet" href="/css/listview.css"/>}
+    <script type="module" src="/js/main.js" defer></script>
+    <!-- 追加のCSSとJSを読み込む -->
+    {css && (
+      Array.isArray(css)
+        ? css.map(href => <link rel="stylesheet" href={href} />)
+        : <link rel="stylesheet" href={css} />
+    )}
+    {js && (
+      Array.isArray(js)
+        ? js.map(src => <script type="module" src={src} defer/>)
+        : <script type="module" src={js} defer/>
+    )}
+  </head>
+  <body>
+    <Header links={navLinks} />
+
+    {sidebar ? (
+      <div class="content">
+        <Sidebar>
+          <slot name="sidebar" />
+        </Sidebar>
+        <main>
+          <slot />
+        </main>
+      </div>
+    ) : (
+      <main>
+        <slot />
+      </main>
+    )}
+
+    <Footer />
+  </body>
+</html>

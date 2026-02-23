@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Netflix Auto Skip ?",
+  "version": "1.3",
+  "description": "Netflixの前回のあらすじ・イントロスキップ・視聴を続けるボタンを自動で押してくれる拡張機能！",
+  "permissions": [
+    "storage",
+    "scripting",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://www.netflix.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "media/icon16.png",
+    "32": "media/icon32.png",
+    "48": "media/icon48.png",
+    "128": "media/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Netflix Auto Skip",
+    "default_icon": {
+      "16": "media/icon16.png",
+      "32": "media/icon32.png"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+/* 拡張機能が注入するカスタムボタンの見た目です。
+   既存画面への影響を減らすため、.groupBtn に限定してスタイルを当てています。 */
+
+/* FullCalendar のボタン群に並ぶときの基本サイズ調整 */
+.fc button.groupBtn {
+	font-size: 11px;
+	margin: 1.5px;
+}
+
+/* 通常状態 */
+.groupBtn {
+	background-color: #3092d9;
+	border: none;
+	border-radius: 2px;
+	min-width: 0;
+	color: #fff;
+}
+
+/* 押下時にわずかに沈み込む表現 */
+.groupBtn:active {
+	transform: translateX(1px) translateY(1px);
+}
+
+/* 選択状態（グループボタン/会議室ボタン共通） */
+.groupBtn.isActive {
+	background-color: #1f74b1;
+	box-shadow: inset 0 0 1px #00000059, 0 0 0 1px #3092d959;
+}

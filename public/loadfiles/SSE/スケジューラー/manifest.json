@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "スケジューラを簡単に操作したい！",
+  "version": "2026.02.25",
+  "description": "アイコン追加",
+  "permissions": [
+    "scripting",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://miyabi381.github.io/*",
+    "https://web.drm.ddreams.jp/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "icons": {
+    "16": "media/icon16.png",
+    "32": "media/icon32.png",
+    "48": "media/icon48.png",
+    "128": "media/icon128.png"
+  },
+  "action": {
+    "default_icon": {
+      "16": "media/icon16.png",
+      "32": "media/icon32.png",
+      "48": "media/icon48.png",
+      "128": "media/icon128.png"
+    }
+  }
+}

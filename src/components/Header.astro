@@ -8,11 +8,14 @@ const { links = [] } = Astro.props as { links?: Link[] };
 ---
 
 <header>
-  <nav>
+  <nav class="site-nav">
     <ul>
       {links.map((link: Link) => (
         <li><a href={link.href}>{link.label}</a></li>
       ))}
     </ul>
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-live="polite">
+      テーマ切替
+    </button>
   </nav>
 </header>

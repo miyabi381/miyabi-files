@@ -48,7 +48,15 @@ const fileTree = buildTree(files);
 // マークアップセクション側に持ち越して再帰的に構築する。
 ---
 
-<BaseLayout title="ファイルたち" sidebar={true} js={["/js/viewfiles.js"]}>
+<BaseLayout
+  title="ファイルたち"
+  sidebar={true}
+  css={[
+    "https://cdn.jsdelivr.net/npm/highlight.js@11.11.1/styles/github.min.css",
+    "https://cdn.jsdelivr.net/npm/highlight.js@11.11.1/styles/github-dark.min.css",
+  ]}
+  js={["/js/viewfiles.js"]}
+>
   <div slot="sidebar">
     <h2>ファイルリスト</h2>
     <ul id="file-list">

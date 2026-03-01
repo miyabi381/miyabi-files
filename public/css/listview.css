@@ -1,34 +1,37 @@
 /* ListView専用レイアウト */
 .content {
     display: grid;
-    grid-template-columns: 240px 1fr;
-    gap: 1rem;
+    grid-template-columns: minmax(220px, 280px) minmax(0, 1fr);
+    gap: 1.25rem;
     max-width: 1200px;
     margin: 2rem auto;
     padding: 0 1rem;
 }
 
 aside {
-    background: #fff;
-    padding: 1rem;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    background: var(--surface);
+    padding: 1.1rem;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(12px);
     width: auto;
+    animation: rise-in 0.45s ease-out both;
 }
 
 aside h2 {
     margin-top: 0;
     font-size: 1.25rem;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.65rem;
 }
 
 main {
-    background: #fff;
-    padding: 1rem;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    margin: 0px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    margin: 0;
 }
 
 @media (max-width: 600px) {
@@ -44,7 +47,8 @@ main {
 
 #file-list details > summary {
     cursor: pointer;
-    padding: 0.25rem 0;
+    padding: 0.3rem 0;
+    color: var(--text);
 }
 
 #file-list details[open] > summary {

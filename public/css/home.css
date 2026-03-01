@@ -1,0 +1,57 @@
+.home-intro {
+    position: relative;
+    padding: 0.4rem 0 0.2rem;
+}
+
+.home-kicker {
+    margin: 0 0 0.45rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
+.home-intro h1 {
+    margin: 0 0 1rem;
+    font-size: clamp(1.9rem, 2.6vw, 2.6rem);
+}
+
+.home-intro p {
+    margin: 0 0 0.9rem;
+    color: color-mix(in srgb, var(--text) 88%, var(--text-muted));
+}
+
+.home-section {
+    margin-top: 1.6rem;
+    padding: 1rem 1rem 1.1rem;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: color-mix(in srgb, var(--surface-2) 72%, transparent);
+}
+
+.home-section h2 {
+    margin: 0 0 0.65rem;
+    font-size: 1.1rem;
+}
+
+.home-section p {
+    margin: 0;
+}
+
+.home-list {
+    margin: 0;
+    padding-left: 1.2rem;
+    display: grid;
+    gap: 0.4rem;
+}
+
+.home-list li::marker {
+    color: var(--accent);
+}
+
+@media (max-width: 760px) {
+    .home-section {
+        padding: 0.9rem;
+        border-radius: 12px;
+    }
+}

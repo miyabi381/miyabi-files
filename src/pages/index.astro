@@ -2,7 +2,35 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout title="Home">
-  <h1>Home</h1>
-  <p>ここに本文を書く</p>
+<BaseLayout title="Home" css={["/css/home.css"]}>
+  <section class="home-intro">
+    <p class="home-kicker">miyabi119 tools</p>
+    <h1>miyabi119 のツール公開ページ</h1>
+    <p>
+      このサイトは、miyabi119 が自宅で作成した拡張機能やツールを公開している個人的なスペースです。
+      学習過程の詳細な解説よりも、実際に作ったものや構成ファイルをそのまままとめて置くことを目的にしています。
+    </p>
+    <p>
+      環境設定ファイルやコード一式など、制作物そのものを一覧できるシンプルな公開場所として運用しています。
+      ページ作成には ChatGPT や Codex を活用し、構成管理やファイル整理も含めて効率化しています。
+    </p>
+  </section>
+
+  <section class="home-section">
+    <h2>主な掲載内容</h2>
+    <ul class="home-list">
+      <li>自作の拡張機能</li>
+      <li>個人開発ツール</li>
+      <li>環境構成ファイル</li>
+      <li>実験的に作成したスクリプト</li>
+    </ul>
+  </section>
+
+  <section class="home-section">
+    <h2>運用方針</h2>
+    <p>
+      基本的には個人用途で作成したものの公開先として運用しています。
+      必要に応じて随時追加・更新していきます。
+    </p>
+  </section>
 </BaseLayout>

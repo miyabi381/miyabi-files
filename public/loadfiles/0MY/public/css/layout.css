@@ -1,38 +1,8 @@
-/* レイアウト共通スタイル: ヘッダ・フッタ・ナビ */
-
-header {
-    background: #ffffff;
-    border-bottom: 1px solid #ddd;
-    padding: 0.5rem 1rem;
+/* ページ共通のレイアウト補助 */
+main > :first-child {
+    margin-top: 0;
 }
 
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 1rem;
-}
-
-nav a {
-    text-decoration: none;
-    color: #333;
-    padding: 0.25rem 0.5rem;
-    transition: background 0.2s, color 0.2s;
-}
-
-nav a:hover,
-nav a:focus {
-    background: #007acc;
-    color: #fff;
-    border-radius: 4px;
-}
-
-footer {
-    text-align: center;
-    font-size: 0.875rem;
-    color: #666;
-    padding: 1rem 0;
-    border-top: 1px solid #ddd;
-    background: #fff;
+main > :last-child {
+    margin-bottom: 0;
 }
